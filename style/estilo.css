@@ -1,0 +1,12 @@
+body{
+    text-align: center;
+}
+
+h1{
+    color: blue;
+    padding: 20px;
+    background: linear-gradient(to right, #e4e005 30%, #0fee2d 70%);
+    text-align: right;
+}
+
+

@@ -8,22 +8,29 @@
     <title>Encontra seu endereço</title>
 </head>
 <body>
-    <h1>Consulta de Endereço</h1>
+    <h1>Via CEP</h1>
     <form id="form-cep">
+        <h1>Consulta de Endereço</h1>
         <label for="cep">CEP:</label>
         <input type="text" id="cep" name="cep" onblur="consultarCEP(this.value)" />
         <br/>
+        <br>
         <label for="logradouro">Logradouro:</label>
         <input type="text" id="logradouro" name="logradouro" readonly />
         <br/>
+        <br>
         <label for="bairro">Bairro:</label>
         <input type="text" id="bairro" name="bairro" readonly />
         <br/>
+        <br>
         <label for="cidade">Cidade:</label>
         <input type="text" id="cidade" name="cidade" readonly />
         <br/>
+        <br>
         <label for="estado">Estado:</label>
         <input type="text" id="estado" name="estado" readonly />
+        <br>
+        <br>
     </form>
     <button id="consultaCEP" type="button" onclick="consultarCEP()"> Consulta </button>
     <button id="LimparCEP" type="button" onclick="limpCampos()"> Limpar </button>
