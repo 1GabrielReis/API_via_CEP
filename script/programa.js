@@ -1,6 +1,21 @@
-function consultarCEP(cep) {
-  if (cep.length === 8) { // Verifica se o CEP tem 8 dígitos
 
+const document.addEventListener('DOMContentLoaded', function() {
+  const form = document.getElementById('form-cep');
+  form.onsubmit = function(e) {
+      // Log do objeto do evento
+      console.log(e);
+
+
+      e.preventDefault();
+
+  };
+});
+
+
+function consultarCEP() {
+  const cep= document.getElementById("cep").value;
+  console.log(cep);
+  if (cep.length === 8) { // Verifica se o CEP tem 8 dígitos
       fetch(`https://viacep.com.br/ws/${cep}/json/`)    
       .then(response => response.json())
 
@@ -15,7 +30,6 @@ function consultarCEP(cep) {
     }
   }
 
-  
 
   function preencherCampos(dados) {
     document.getElementById('logradouro').value = dados.logradouro || '';

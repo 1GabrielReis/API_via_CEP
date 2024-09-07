@@ -1,4 +1,12 @@
-body{
+
+section{
+    display: flex;
+    justify-content: center;
+}
+
+.contentFormViaCEP{
+    height: 700px;
+    width: 550px;
     text-align: center;
 }
 

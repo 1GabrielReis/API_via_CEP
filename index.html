@@ -1,38 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="./style/estilo.css">
     <script src="./script/programa.js"></script>
     <title>Encontra seu endereço</title>
 </head>
 <body>
     <h1>Via CEP</h1>
-    <form id="form-cep">
-        <h1>Consulta de Endereço</h1>
-        <label for="cep">CEP:</label>
-        <input type="text" id="cep" name="cep" onblur="consultarCEP(this.value)" />
-        <br/>
-        <br>
-        <label for="logradouro">Logradouro:</label>
-        <input type="text" id="logradouro" name="logradouro" readonly />
-        <br/>
-        <br>
-        <label for="bairro">Bairro:</label>
-        <input type="text" id="bairro" name="bairro" readonly />
-        <br/>
-        <br>
-        <label for="cidade">Cidade:</label>
-        <input type="text" id="cidade" name="cidade" readonly />
-        <br/>
-        <br>
-        <label for="estado">Estado:</label>
-        <input type="text" id="estado" name="estado" readonly />
-        <br>
-        <br>
-    </form>
-    <button id="consultaCEP" type="button" onclick="consultarCEP()"> Consulta </button>
-    <button id="LimparCEP" type="button" onclick="limpCampos()"> Limpar </button>
+
+   <section class="container mt-5 ">
+        <div class="contentFormViaCEP border">
+            <h2 class="mt-3">Consulta de Endereço</h2>
+            <form id="form-cep">
+                
+                <div class="mb-3 p-3">
+                    <label for="cep" class="form-label">CEP:</label>
+                    <input type="text" maxlength="9" id="cep" name="cep" class="form-control"/>
+                </div>
+                
+                <div class="mb-3 p-3">
+                    <label for="logradouro" class="form-label">Logradouro:</label>
+                    <input type="text" id="logradouro" name="logradouro" readonly class="form-control"/>
+                </div>
+                
+                <div class="mb-3 p-3">
+                    <label for="bairro" class="form-label">Bairro:</label>
+                    <input type="text" id="bairro" name="bairro" readonly class="form-control"/>
+                </div>
+
+                <div class="mb-3 p-3">
+                    <label for="cidade" class="form-label">Cidade:</label>
+                    <input type="text" id="cidade" name="cidade" readonly class="form-control"/>
+                </div>
+
+                <div class="mb-3 p-3">
+                    <label for="estado" class="form-label">Estado:</label>
+                    <input type="text" id="estado" name="estado" readonly class="form-control"/>
+                </div>
+
+                <button id="consultaCEP" type="submit" onclick="consultarCEP()" class="btn btn-success"> Consulta </button>
+                <button id="LimparCEP" type="submit" onclick="limpCampos()" class="btn btn-danger"> Limpar </button>
+            </form>
+        </div>
+   </section>
+   
+  
+
 </body>
 </html>
